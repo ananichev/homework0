@@ -27,7 +27,6 @@ def binary_multiple_of_4?(str)
   if str =~ /^[0-1]+$/ && str.to_i(2) % 4 == 0
     true
   else
-    p str.to_i
     false
   end
 end
