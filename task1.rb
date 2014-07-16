@@ -2,7 +2,7 @@
 # and returns the sum of its elements.
 # For an empty array it should return zero.
 def sum(array)
-  0
+  array.inject(0) { |r, e| r + e }
 end
 
 # Takes an array of integers as an argument
@@ -11,7 +11,13 @@ end
 # For an array with just one element,
 # it should return that element.
 def max_2_sum(array)
-  raise "Not yet implemented"
+  new = []
+  while new.size < 2 && array.size != 0
+    array.sort!
+    new << array.max
+    array.pop
+  end
+  sum new
 end
 
 # DIFFICULT
